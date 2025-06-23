@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Configuración
-MINECRAFT_JAR="server.jar"
-JAVA_MEMORY="12G"
+MINECRAFT_JAR="server.jar" #colocas el nombre del archivo del servidor
+JAVA_MEMORY="12G" # colocas la ram que quieras ponerle al servidor en este caso esta en 12G pero es recomendable 4G para jugar de entre 2 y 5 jugadores.
 
 # Verificar si el archivo JAR existe
 if [ ! -f "$MINECRAFT_JAR" ]; then
@@ -11,5 +11,6 @@ if [ ! -f "$MINECRAFT_JAR" ]; then
 fi
 
 # Iniciar Minecraft (en primer plano para ver logs en terminal)
-java -Xmx"$JAVA_MEMORY" -jar "$MINECRAFT_JAR" nogui
 echo "servidor de minecraft iniciado. ahora has en otra terminal: ./startp.sh"
+java -Xmx"$JAVA_MEMORY" -jar "$MINECRAFT_JAR" nogui
+echo "servidor de minecraft cerrado, espero que les alla gustado"
